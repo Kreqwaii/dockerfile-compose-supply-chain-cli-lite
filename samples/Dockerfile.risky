@@ -1,0 +1,12 @@
+FROM python:latest
+
+ENV DB_PASSWORD=super_secret_password_123
+ARG API_TOKEN=tok_live_99887766
+
+ADD https://example.com/install.tar.gz /tmp/install.tar.gz
+
+RUN curl -fsSL https://get.example.com/setup.sh | sh
+
+WORKDIR /app
+COPY . /app
+CMD ["python", "app.py"]

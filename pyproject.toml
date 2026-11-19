@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dockerfile-compose-supply-chain-cli-lite"
+version = "0.1.0"
+description = "Offline security & supply-chain linter for Dockerfile and docker-compose.yml (pure Python stdlib)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+dependencies = []
+
+[project.scripts]
+docker-supply-lite = "docker_supply_lite.cli:main"
